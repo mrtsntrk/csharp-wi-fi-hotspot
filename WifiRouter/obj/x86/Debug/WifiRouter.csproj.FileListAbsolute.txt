@@ -1,0 +1,17 @@
+E:\Projects\C#\WifiRouter\WifiRouter\bin\Debug\WifiRouter.exe
+E:\Projects\C#\WifiRouter\WifiRouter\bin\Debug\WifiRouter.pdb
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.csprojResolveAssemblyReference.cache
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.Form1.resources
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.Properties.Resources.resources
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.csproj.GenerateResource.Cache
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.exe
+E:\Projects\C#\WifiRouter\WifiRouter\obj\x86\Debug\WifiRouter.pdb
+C:\Users\Mertinko\Desktop\C#\WifiRouter\bin\Debug\WifiRouter.exe
+C:\Users\Mertinko\Desktop\C#\WifiRouter\bin\Debug\WifiRouter.pdb
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.csprojAssemblyReference.cache
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.Form1.resources
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.Properties.Resources.resources
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.csproj.GenerateResource.cache
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.csproj.CoreCompileInputs.cache
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.exe
+C:\Users\Mertinko\Desktop\C#\WifiRouter\obj\x86\Debug\WifiRouter.pdb
