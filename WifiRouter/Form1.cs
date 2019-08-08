@@ -53,21 +53,24 @@ namespace WifiRouter
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string ssid = textBox1.Text, key = textBox2.Text;
+            ayarlar.Default.ssid = textBox1.Text.ToString();
+            ayarlar.Default.key = textBox2.Text.ToString();
+            ayarlar.Default.Save();
+            string ssid = ayarlar.Default.ssid.ToString(), key = ayarlar.Default.key.ToString();
             if (!connect)
             {
                 if (String.IsNullOrEmpty(textBox1.Text))
                 {
-                    MessageBox.Show("SSID cannot be left blank !",
-                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("SSID boş bırakılamaz!",
+                    "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
 
                     if (textBox2.Text == null || textBox2.Text == "")
                     {
-                        MessageBox.Show("Key value cannot be left blank !",
-                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Anahtar değeri boş bırakılamaz!",
+                        "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -76,13 +79,13 @@ namespace WifiRouter
                             Hotspot(ssid, key, true);
                             textBox1.Enabled = false;
                             textBox2.Enabled = false;
-                            button1.Text = "Stop";
+                            button1.Text = "Durdur";
                             connect = true;
                         }
                         else
                         {
-                            MessageBox.Show("Key should be more then or Equal to 6 Characters !",
-                            "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Key 6 karakterden uzun olmalıdır.!",
+                            "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -92,7 +95,7 @@ namespace WifiRouter
                 Hotspot(null, null, false);
                 textBox1.Enabled = true;
                 textBox2.Enabled = true;
-                button1.Text = "Start";
+                button1.Text = "Başlat";
                 connect = false;
             }
         }
@@ -123,6 +126,7 @@ namespace WifiRouter
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            getir.Start();
             if (!IsAdmin())
             {
                 RestartElevated();
@@ -133,6 +137,27 @@ namespace WifiRouter
         {
             Hotspot(null, null, false);
             Application.Exit();
+        }
+
+        private void Getir_Tick(object sender, EventArgs e)
+        {
+            textBox1.Text = ayarlar.Default.ssid.ToString();
+            textBox2.Text = ayarlar.Default.key.ToString();
+            getir.Stop();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            DialogResult kapat = new DialogResult();
+            kapat = MessageBox.Show("Ayarları sıfırlamak istediğinizden emin misiniz?", "Sıfırlama Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (kapat == DialogResult.Yes)
+            {
+                ayarlar.Default.Reset();
+            }
+            else
+            {
+
+            }
         }
     }
 }
